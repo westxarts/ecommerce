@@ -1,0 +1,470 @@
+/*----------*----------*----------*----------*---------- Reset */
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: roboto; */
+}
+
+/*----------*----------*----------*----------*---------- Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+
+/*----------*----------*----------*----------*---------- General Styles */
+:root {
+  font-size: 62.5%;
+
+  /*----------*----------*----------* Website Theme */
+  --color-primary: #ffffff;
+  
+  --color-secondary: #60a8fb;
+
+  --color-tertiary: #c2daf6;
+
+  /*----------*----------*----------* Padding */
+  /* 
+        --------------------- Sizing Nature
+        d     = dynamic
+        st    = static
+
+        --------------------- Sizing
+
+        l     = large
+        m     = medium
+        s     = small
+        xs    = extra small
+        c     = customized
+
+          
+        --------------------- Orientation
+        v  = vertical   (top & bottom)
+        h  = horizontal (right & left)
+  */
+
+  /* Dynamic */
+  --padding-d-l-v: calc(2rem + 12vh);
+  --padding-d-l-h: calc(2rem + 12vw);
+
+  --padding-d-mc-v: calc(1rem + 4vh);
+  --padding-d-mc-h: calc(1rem + 4vw);
+
+  --padding-d-m-v: calc(1rem + 2vh);
+  --padding-d-m-h: calc(1rem + 2vw);
+
+  --padding-d-s-h: calc(1rem + 1vw);
+  --padding-d-s-v: calc(1rem + 1vh);
+
+  /* Static */
+  --padding-st-l-h: 3rem;
+  --padding-st-l-v: 2rem;
+
+  --padding-st-m-h: 2.5rem;
+  --padding-st-m-v: 1.5rem;
+
+  --padding-st-s-h: 2rem;
+  --padding-st-s-v: 1rem;
+
+  /*----------*----------*----------* Typography */
+
+  /* 
+      --------------------- Sizing Nature
+      d     = dynamic
+      st    = static
+      
+      --------------------- Sizing
+      xl    = extra large
+      l     = large
+      m     = medium
+      s     = small
+      xs    = extra small
+      c     = customized
+      
+      --------------------- Family
+      font-family: 'Oswald', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+*/
+
+  /* Dynmaic */
+  --font-size-d-lc: calc(3rem + 3.5vw);
+  --font-size-d-l: calc(1rem + 3vw);
+  --font-size-d-mc: calc(2rem + 2.5vw);
+  --font-size-d-m: calc(1rem + 2vw);
+  --font-size-d-sc: calc(1rem + 1.5vw);
+  --font-size-d-s: calc(1rem + 1vw);
+
+  /* Static */
+  --font-size-st-xl: 4rem;
+  --font-size-st-lc: 3.5rem;
+  --font-size-st-l: 3rem;
+  --font-size-st-mc: 2.5rem;
+  --font-size-st-m: 2rem;
+  --font-size-st-sc: 1.5rem;
+  --font-size-st-s: 1rem;
+
+  /* Family */
+  --font-family-title: "Oswald", sans-serif;
+  --font-family-content: "Plus Jakarta Sans", sans-serif;
+}
+
+/*----------*----------*----------*----------*---------- Utility Classes */
+
+/*----------*----------*----------* Section Padding */
+.section__padding {
+    padding: var(--padding-d-l-v) var(--padding-d-l-h);
+  }
+  
+  /*----------*----------*----------* Section Title */
+  .section__title {
+    font-size: var(--font-size-d-sc);
+    font-weight: 900;
+  }
+  
+  /*----------*----------*----------* Section Para */
+  .section__para {
+    font-size: var(--font-size-st-sc);
+    color: var(--color-quaternary);
+  }
+  
+  /*----------*----------*----------*----------*---------- Overall Layout */
+  
+  .container {
+    display: grid;
+    grid-template-columns:
+      [container-start] repeat(12, minmax(min-content, 12.5rem))
+      [container-end];
+  
+    grid-template-rows: repeat(9, min-content);
+    justify-content: center;
+  }
+  
+  .overall-layout {
+    grid-column: container-start / container-end;
+  }
+
+
+  /* --------------------------------------------------------------------- HEADER -------------- */
+
+  .header {
+    display: flex;  
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 0;
+
+  }
+
+  /* .header__navlinks {
+    display: flex;
+    justify-content: space-between;
+  } */
+
+  .header__navlinks a {
+    color: #808080;
+  }
+
+  .header__logonav {
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    gap: 3rem;
+    color: #F79327;
+  }
+
+  .header__infos--image {
+    width: 30%;
+  }
+
+  .header__infos {
+    width: 20%;
+  }
+
+  .header__infos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+
+  }
+
+  .header__infos--image img {
+    width: 40%;
+    border-radius: 2rem;
+  }
+
+  .header__infos--profile {
+    width: 30%;
+  }
+
+  .rule {
+    display: flex;
+    justify-content: center;
+  }
+
+  hr {
+    width: 70%;
+    height: 1px;
+    background-color: #F6AE99;
+    border: none;
+  }
+
+
+  /* --------------------------------------------------------------------- HERO -------------- */
+
+  .hero__container {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .hero__container--gallery {
+    width: 100%;
+  }
+
+  .hero__container--gallery__img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 1rem;
+    object-position: right top;
+  }
+
+  .hero__container--gallery__images {
+    width: 100%;
+    display: flex;
+    /* padding: 2rem 1rem; */
+    gap: 0rem;
+    text-align: center;
+    padding-top: 2rem;
+  }
+
+  .hero__container--gallery__images img {
+    width: 80%;
+    border-radius: 1rem;
+  }
+
+  .hero__container--contents {
+    padding: 0 6rem;
+  }
+
+  .hero__container--contents__mini-title {
+    color: #F79327;
+    font-weight: bold;
+    padding-bottom: 2rem;
+  }
+
+  .hero__container--contents__title {
+    font-weight: bold;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+  }
+
+  .hero__container--contents__para {
+    color: #F6AE99;
+    padding-bottom: 2rem;
+  }
+
+  .hero__container--contents__offer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .hero__container--contents__offer--percentage {
+    background-color: #FFE6C7;
+    color: #FF8400;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+  }
+
+  .hero__container--contents__discount {
+    color: grey;
+    font-weight: bold;
+    text-decoration: line-through;
+  }
+
+  .hero__container--contents__buttons,
+  .hero__container--contents__buttons--range {
+    display: flex;
+  }
+
+  .hero__container--contents__buttons {
+    /* justify-content: space-between; */
+    gap: 4rem;
+    padding-top: 2rem;
+  }
+
+  .hero__container--contents__buttons--range {
+    background-color: #f7f8fd;
+    padding: 1rem 0.1rem;
+    border-radius: 1rem;
+    align-items: center;
+  }
+
+  .hero__container--contents__buttons--range p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0rem 2rem;
+  }
+
+  .hero__container--contents__buttons--range p:first-child,
+  .hero__container--contents__buttons--range p:last-child {
+    color: #FF8400;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  .hero__container--contents__buttons--button {
+    background-color: #FF8400;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__container--contents__buttons--button i {
+    padding-right: 2rem;
+  }
+
+  .header__hamburger {
+    /*	background-color: red;*/
+        height: 2rem;
+        width: 3rem;
+        margin: 1rem 95px;
+        cursor: pointer;
+    
+        position: fixed;
+        top: 8px;
+        right: 0;
+        transition: all 0.5s ease-in-out;
+        z-index: 11;
+    
+        display: none;
+    }
+    
+    .line-1,
+    .line-2,
+    .line-3 {
+        height: 3px;
+        background-color: #FF8400;
+        margin-top: 7.5px;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+  @media screen and (max-width: 630px) {
+    .header__navlinks {
+        display: flex;
+		flex-direction: column;
+        text-align: center;
+		top: -2.3rem;
+		right: 50%;
+		padding: 2rem;
+		background-color: #000;
+
+		transform: translateX(50%) translateY(9.5rem) scaleY(0);
+		border-bottom-left-radius: 0.5rem;
+    	border-bottom-right-radius: 0.5rem;
+    	transition: all 0.5s ease-in-out;
+    	transform-origin: top;
+        position: fixed;
+    }
+
+    .header__infos {
+        opacity: 0;
+    }
+
+    .header__navlinks a {
+		color: #FDD36A;
+	}
+
+	.header__hamburger {
+		display: block;
+	}
+
+	.hamburger-toggled {
+		transform: rotate(360deg);
+		width: 40px;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.line-1-toggled {
+		transform: rotate(45deg) translate(5.1px, 10.7px);
+		transition: all 0.5s ease-in-out;
+		background-color: #EB455F;
+	}
+
+	.line-2-toggled {
+		transform: scale(0);
+		transition: all 0.5s ease-in-out;
+	}
+
+	.line-3-toggled {
+		transform: rotate(-45deg) translate(5.6px, -9.5px);
+		transition: all 0.5s ease-in-out;
+		background-color: #EB455F;
+	}
+
+    .display-nav {
+		transform: translateX(50%) translateY(5.5rem) scaleY(1);
+		transform-origin: top;
+	}
+
+    .overlay {
+        position: relative;
+        z-index: 9;
+        }
+    
+        .overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0 0 0 / 0.75);
+            z-index: 0;
+        }
+
+        .hero {
+            /* text-align: center; */
+        }
+
+        .hero__container--contents__buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero__container--contents__buttons--range p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 0rem 2rem;
+            /* padding: 0 4rem; ------ working */
+          }
+
+          .controls,
+          .controls-2 {
+            display: flex;
+            justify-content: center;
+          }
+
+          .hero__container--contents__title {
+            font-size: 2.5rem;
+          }
+
+          .hero__container--contents {
+            padding: 0;
+          }
+
+        
+
+
+
+  }
+
+  

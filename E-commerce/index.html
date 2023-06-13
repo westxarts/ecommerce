@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg" />
+    
+        <!-- Font Awesome -->
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet"
+        />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="general-styles.css">
+    <title>X-ArtStores | Product</title>
+</head>
+<body>
+
+    <!-- --------------------------------------------------------------------- HEADER -------------- -->
+
+    <div class="header">
+        <div class="header__logonav">
+            <h3 class="header__logo--logo">Sneakers</h3>
+            <div class="header__navlinks">
+                <a href="#">Collections</a>
+                <a href="#">Men</a>
+                <a href="#">Women</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="header__hamburger">
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+                <div class="line-3"></div>
+            </div>
+        </div>
+
+
+        <div class="header__infos">
+            <div class="header__infos--cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            
+                <figure class="header__infos--image">
+                    <img src="images/image-avatar.png" alt="Shoe">
+                </figure>
+            
+        </div>
+    </div>
+
+    <div class="rule">
+        <hr>
+    </div>
+
+    <!-- --------------------------------------------------------------------- HERO -------------- -->
+    <section class="hero section__padding">
+        <div class="hero__container grid__cards">
+            <div class="hero__container--gallery">
+                <img id="bigImage" class="hero__container--gallery__img" src="images/shoes1.jpg" alt="">
+
+                <div class="hero__container--gallery__images">
+
+                    <figure class="hero__container--gallery__images--image">
+                        <img class="testImage" src="images/shoes2.jpg" alt="">
+                    </figure>
+                    <figure class="hero__container--gallery__images--image">
+                        <img src="images/shoes1.jpg" alt="">
+                    </figure>
+                    <figure class="hero__container--gallery__images--image">
+                        <img src="images/shoes5.jpg" alt="">
+                    </figure>
+                    <figure class="hero__container--gallery__images--image">
+                        <img src="images/shoes2.jpg" alt="">
+                    </figure>
+                    
+                </div>
+            </div>
+
+            <div class="hero__container--contents">
+                <p class="hero__container--contents__mini-title">Sneakers Company</p>
+                <h3 class="hero__container--contents__title">Fall Limited Edtion Sneakers</h3>
+                <p class="hero__container--contents__para">Collections Men Women About Contact Sneaker 
+                    Company Fall Limited Edition Sneakers These low-profile sneakers are your perfect
+                     casual wear companion. Featuring a durable rubber outer sole, they'll withstand 
+                     everything the weather can offer.</p>
+
+                     <div class="hero__container--contents__offer">
+                        <h3 class="hero__container--contents__offer--amount">$125.00</h3>
+                        <p class="hero__container--contents__offer--percentage">50%</p>
+                     </div>
+
+                     <p class="hero__container--contents__discount">$250.00</p>
+
+                     <div class="hero__container--contents__buttons">
+                        <div class="controls">
+
+                            <div class="hero__container--contents__buttons--range">
+                                <p>-</p>
+                                <p>0</p>
+                                <p>+</p>
+                            </div>
+                        </div>
+
+                        <div class="controls-2">
+
+                            <p class="hero__container--contents__buttons--button">
+                                 <i class="fa-solid fa-cart-shopping"></i> Add to cart</p>
+                        </div>
+                     </div>
+
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
